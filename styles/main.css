@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 100%;
+    background-color: rgb(73, 0, 0);
+    color: silver;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html{
+    background-color: rgb(88, 88, 88);
+}
+header{
+    display: flex;
+    align-items: center;
+    border-bottom: 3px ridge goldenrod;
+}
+header img{
+    border: 2px solid silver;
+    border-radius: 7px;
+    max-width: 100%;
+    margin: .75em;
+    display: block;
+}
+header div{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+header h2{
+    font-size: 250%;
+    margin-bottom: .5em;
+    font-style: italic;
+    color: rgb(88, 88, 88);
+    text-shadow: 5px 5px 10px darkred;
+}
+header h3{
+    font-size: 175%;
+    color: rgb(88, 88, 88);
+    text-shadow: 1px 1px 10px darkred;
+}
+.navmenu{
+    border-bottom: 3px ridge goldenrod;
+    background-color: darkgray;
+    border-left: 1px solid goldenrod;
+    border-right: 1px solid goldenrod;
+    display: flex;
+    /* justify-content: center; */
+}
+.navmenu > div{
+    /* flex: 0 1 max-content; */
+    margin: 0 auto;
+}
+.navmenu div{
+    top: 100%;
+    width: 30%;
+    border: 1px solid goldenrod;
+    
+}
+
+.navmenu a{
+    text-align: center;
+    display: block;
+    padding: .7em 0;
+    background-color: rgb(88, 88, 88);
+    font-weight: bold;
+    color: black;
+    transition: ease-in-out 300ms;
+    font-size: 100%;
+}
+.navmenu a:hover{
+    background-color: black;
+    color: goldenrod;
+}
+.toggle-menu{
+    display: none;
+    z-index: 99999;
+    background-color: transparent;
+    width: 25px;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    border: none;
+    background-image: url("../images/hamburger.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+a{
+    text-decoration: none;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em;
+}
+.imagecarousel{
+    position: relative;
+}
+.image{
+    display: none;
+    max-width: 300px;
+    max-height: 150px;
+}
+.image:first-of-type{
+    display: block;
+}
+.image img{
+    border-radius: 10px;
+    border: 3px ridge silver;
+    display: block;
+    max-width: 100%;
+}
+.dots{
+    display: flex;
+    gap: .5em;
+    justify-content: center;
+}
+.dot{
+    margin-top: 2em;
+    margin-bottom: 1em;
+    padding: min(7px, .125em);
+    background-color: silver;
+    border-radius: 50%;
+}
+.active{
+    background-color: gold;
+}
+.fadeout {
+    animation: fade 2000ms;
+}
+
+@keyframes fade {
+    from {opacity: .2}
+    to {opacity: 1}
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+main h2{
+    text-align: center;
+    font-size: 200%;
+    margin-top: 2em;
+    color: darkgray;
+}
+.info{
+    text-align: center;
+    border: 3px ridge goldenrod;
+    background-color: antiquewhite;
+    color: darkred;
+    margin: 1em;
+}
+.info h3{
+    margin-bottom: 1em;
+    font-size: 140%;
+}
+main p{
+    text-align: center;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding: 0 5em 2em 5em;
+    font-size: 120%;
+}
+
+footer{
+    background-color: rgb(88, 88, 88);
+    border-top: 3px ridge goldenrod;
+}
+footer p{
+    padding: 2em;
+    color: darkred;
+    text-align: center;
+    font-size: 85%;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+
+@media (max-width: 767px){
+    
+    header{
+        flex-direction: column;
+        text-align: center;   
+        padding-top: 1em;
+    }
+    header h3{
+        padding-bottom: 1em;
+    }
+    header img {
+        margin: 0 auto;
+    }
+    .toggle-menu{
+        display: block;
+    }
+    .navmenu{
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 80%;
+        padding-top: 10em;
+        transition: transform linear 300ms;
+        transform: translateX(-100%);
+        z-index: 9999;
+        background-image: linear-gradient(to right, rgb(88,0,0), black, rgb(88,0,0));
+    }
+    .navmenu div{
+        width: 80%;
+        margin: 0 auto;
+        border: none;
+    }
+    .navmenu a{
+        background-color: transparent;
+        color: whitesmoke;
+        border: none;
+    }
+    .navmenu a:hover{
+        background-color: transparent;
+    }
+    .toggle-menu[data-visible="true"]{
+        background-image: url("../images/closemobile.png");
+        z-index: 999999;
+    }
+    .navmenu[data-visible="true"]{
+        transform: translateX(0%);
+    }
+    .navmenu.active{
+        display: block;
+    }
+    .navmenu a{
+        text-align: left;
+    }
+    .dots{
+        gap: .125em;
+    }
+    
+}

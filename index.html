@@ -3,20 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <link rel="stylesheet" href="styles/main.css">
+
+  
+
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+    <title>The History Of Dave Grohl</title>
 </head>
 <body>
     <header>
-        <h2>The History of Dave Grohl's Bands</h2>
-        <h3>Website Under Development</h3>
+        <img src="images/dave11.jpg" alt="dave">
+        <div>
+            <h2>The History Of Dave Grohl</h2>
+            <h3>And The Bands He Has Played with</h3>
+        </div>
     </header>
+
+    <!-- navigation menu -->
+
+	<button class="toggle-menu" id="toggle-menu" data-visible="false"></button>
+    <nav class="navmenu" id="navmenu" data-visible="false">
+			<div><a href="index.html">Home</a></div>
+			<div><a href="bands/scream.html">Scream</a></div>
+			<div><a href="bands/nirvana.html">Nirvana</a></div>
+			<div><a href="bands/foofighters.html">Foo Fighters</a></div>
+			<div><a href="bands/queensofthestoneage.html" title="queens of the stone age">QOTSA </a></div>
+        </nav>
+
+	
+
+
     <main>
-        <p>For my project I want to build a website that displays the life of the artist Dave Grohl. For my website i will have a homepage of who Dave Grohl is. Then for the other pages of the website I will discus the diffent bands he has been with. This ranges from Scream, Nirvana, Foo Fighters, Queens of the stone age, etc.</p>
+        <h2>This is Dave Grohl</h2>
+        <div class="container">
+            <div class="imagecarousel">
+                <div class="image fadeout"><img src="images/dave1.jpg" alt=""></div>
+                <div class="image fadeout"><img src="images/dave2.jpg" alt=""></div>
+                <div class="image fadeout"><img src="images/dave3.jpg" alt=""></div>
+                <div class="image fadeout"><img src="images/dave4.jpg" alt=""></div>
+                <div class="image fadeout"><img src="images/dave5.jpg" alt=""></div>
+                <div class="image fadeout"><img src="images/dave6.jpg" alt=""></div>
+                <div class="image fadeout"><img src="images/dave7.jpg" alt=""></div>
+                <div class="image fadeout"><img src="images/dave8.jpg" alt=""></div>
+                <div class="image fadeout"><img src="images/dave9.jpg" alt=""></div>
+                <div class="image fadeout"><img src="images/dave10.jpg" alt=""></div>
+                
+            </div>
+        </div>
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            
+        </div>
+        <!-- make it in a div and then center content -->
+        <div class="info">
+            <h3>Dave was born on January 14, 1969</h3>
+
+            <p>Dave Grohl is an American musician that has been fasinated with music ever sing his childhood. As he grew up he then went on to join, and even create, many differnt bands. This website will walk you through some of the bands that Dave has been apart of.</p>
+        </div>
+        
 
     </main>
     <footer>
-
+        <p>&copy;<span id="copyright"></span> Cooper Bowman Productions</p>
     </footer>
     
 </body>
 </html>
+<script src="scripts/script.js"></script>
